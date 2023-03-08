@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        background-color: #444;
+        color: #eee;
+        font-family: sans-serif;
+      }
+      code{
+        font-family: consolas;
+        color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Tablas</h1>
+    </header>
+    <main>
+      <section>
+        <h2>Filas y Columnas</h2>
+        <p>
+          Las tablas se colocan dentro
+          de una etiqueta
+          <code>table</code>
+          <p>Las tablas tienen 3 partes</p>
+        </p>
+        <ul>
+            <li><code>thead</code>: Cabecera</li>
+            <li><code>tbody</code>: Cuerpo</li>
+            <li><code>tfoot</code>: Pie de tabla</li>
+        </ul>
+      </section>
+      <hr/>
+      <section>
+        <h2>Tabla simple</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Cantidad</th>                    </td>
+                    <th>Descripción</th>
+                    <th>P.Unitario</th>
+                    <th>P.Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2</td>
+                    <td>Teclados mecánicos Micronics</td>
+                    <td>S/. 200.00</td>
+                    <td>S/. 400.00</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Monitor widescreen Samsung</td>
+                    <td>S/. 800.00</td>
+                    <td>S/. 800.00</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Mouse HiperX</td>
+                    <td>S/. 150.00</td>
+                    <td>S/. 150.00</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3" align="right">Total:</td>
+                    <td>S/. 1380.00</td>
+                </tr>
+            </tfoot>
+        </table>
+      </section>
+      <hr/>
+      <h2>Combinando filas</h2>
+      <p>Para combinar filas se 
+        usa el atributo 
+        <code>rowspan</code></p>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Categoría</th>
+            <th>Etiquetas</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- tr*16>td{izquierda $}+td{derecha $} -->
+<tr>
+    <td rowspan="5">izquierda 1</td>
+    <td>derecha 1</td>
+</tr>
+<tr>
+    <td>derecha 2</td>
+</tr>
+<tr>
+      <td>derecha 3</td>
+</tr>
+<tr>
+      <td>derecha 4</td>
+</tr>
+<tr>
+      <td>derecha 5</td>
+</tr>
+<tr>
+    <td rowspan="5">Izquierda 6</td>
+      <td>derecha 6</td>
+</tr>
+<tr>
+    
+      <td>derecha 7</td>
+</tr>
+<tr>
+      <td>derecha 8</td>
+</tr>
+<tr>
+      <td>derecha 9</td>
+</tr>
+<tr>
+     <td>derecha 10</td>
+</tr>
+<tr>
+    <td rowspan="6">izquierda 11</td>
+    <td>derecha 11</td>
+</tr>
+<tr>
+    <td>derecha 12</td>
+</tr>
+<tr>
+    <td>derecha 13</td>
+</tr>
+<tr>
+    <td>derecha 14</td>
+</tr>
+<tr>
+    <td>derecha 15</td>
+</tr>
+<tr>
+    <td>derecha 16</td>
+</tr>
+    </tbody>
+</table>
+<section>
+    <h2>Datos Factura</h2>
+    <table border="1">
+          <tbody>
+            <tr>
+                <td rowspan="5"></td>Supermercados "La Vivienda"</td>
+                <td></td>
+                <td>07/03/2023</td>
+            </tr>
+            <tr>
+                <td colspan="2">Nro de Factura: 2546.00</td>
+            </tr>
+            <tr>
+                <td>Cliente</td>
+                <td rowspan="3">
+                Juan Francisco Redrován <br>
+                10787995 <br>
+                995863645</td>
+            </tr>
+            <tr>
+                <td>RUC:</td>
+            </tr>
+            <tr>
+                <td>Direccion</td>
+            </tr>
+        </tbody>
+    </table>
+    <section>
+        <H1>tarea</H1>
+        <table border ="1">
+            <tbody>
+            <tr>
+                <td rowspan="5">Supermercados "La Vivienda"</td>
+                <td></td>
+                <td colspan="3">07/03/2023</td>
+            </tr>
+            <tr>
+                <td colspan="5">Nro de Factura: 2546.00</td>
+            </tr>
+            <tr>
+                <td>Cliente:</td>
+                <td rowspan="3"colspan="3"> 
+                Juan Francisco Redrován <br>
+                10787995 <br>
+                995863645</td>
+            </tr>
+            <tr>
+                <td>Direccion:</td>
+            </tr>
+            <tr>
+                <td>RUC</td>
+            </tr>
+            <tr>
+                <td>Código</td>
+                <td>Cantidad</td>
+                <td>Concepto</td>
+                <td>Precio</td>
+                <td>Importe</td>
+            </tr>
+            <tr>
+                <td>A23</td>
+                <td>20</td>
+                <td>LÁPICES</td>
+                <td>25</td>
+                <td>500</td>
+            </tr>
+            <tr>
+                <td>A45</td>
+                <td>100</td>
+                <td>BORRADORES</td>
+                <td>10</td>
+                <td>1000</td>
+            </tr>
+            <tr>
+                <td rowspan="5"colspan="3"> </td>
+            </tr>
+            <tr>
+                <td>Importe</td>
+                <td>1,500.00</td>
+            </tr>
+            <tr>
+                <td>Descuento</td>
+                <td>75.00</td>
+            </tr>
+            <tr>
+                <td>Base Imponible</td>
+                <td>1,425.00</td>  
+            </tr>
+            <tr>
+                <td>IVA</td>
+                <td>228.00</td>
+            </tr>
+            <tr>
+                <td colspan="4">Total</td>
+                <td>1,623.00</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+</section>
+    </main>
+  </body>
+</html>
