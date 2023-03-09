@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+        padding: 0;
+      }
+      body {
+        background: #e0e0e0;
+      }
+      .card {
+        height: 250px;
+        width: 250px;
+        margin-left: auto;
+        margin-right: auto;
+        /*border: 1px solid #ccc;*/
+        /* box-shadow: #888 10px 10px inset; */
+        /* box-shadow: #bbb 0px 0px 16px inset;
+        border-radius: 8px; */
+        margin-top: 50px;
+        padding: 16px;
+        border-radius: 35px;
+        background: #e0e0e0;
+        box-shadow: 28px 28px 56px #bebebe, -28px -28px 56px #ffffff;
+      }
+      .caja-gradiente {
+        height: 300px;
+        background-image: -webkit-linear-gradient(top left, #f45b67, #f4aaaa);
+      }
+      .caja-gradiente-2 {
+        height: 500px;
+        background: #333333; /* fallback for old browsers*/
+        background: -webkit-linear-gradient(to right, #dd1818, #333333);
+        background: linear-gradient(to right, #dd1818 #333333);
+      }
+      .caja-blur{
+        filter: blur(5px);
+        cursor: pointer;
+      }
+      .caja-blur:hover{
+        filter:blur(0px)
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos earum
+      consequatur sapiente suscipit voluptates eveniet cupiditate repudiandae
+      velit similique rerum ut id, porro cum modi dolor numquam incidunt?
+      Distinctio, nulla!
+    </div>
+    <div class="caja-gradiente"></div>
+    <div class="caja-gradiente-2"></div>
+    <div class="caja-blur">
+        <img src="./textura.png" alt="">
+    </div>
+
+  </body>
+</html>
