@@ -1,62 +1,58 @@
-body{
-    background-color: pink;
+body {
+  background-color: pink;
 }
-.carti_princ{
-    border-radius: 30px 30px 20px 20px;
-    align-content: center;
-    border: solid 10px red;
-    background-color: floralwhite;
-    width: 600px;
-    text-align: center;
-    margin: 20px auto;
-    padding:20px auto;
-    
-}
-
-.cartilla{
-    border-radius: 30px 30px 20px 20px;
-    align-content: center;
-    border: solid 10px red;
-    background-color: floralwhite;
-    width: 600px;
-    text-align: center;
-    margin: 20px auto;
-    padding:20px auto;
-    
-}
-.cartilla2{
-    border-radius: 30px 30px 20px 20px;
-    align-content: center;
-    border: solid 10px red;
-    background-color: floralwhite;
-    width: 600px;
-    text-align: center;
-    margin: 20px auto;
-    padding:auto;
-    
+.carti_princ {
+  border-radius: 30px 30px 20px 20px;
+  align-content: center;
+  border: solid 10px red;
+  background-color: floralwhite;
+  width: 600px;
+  text-align: center;
+  margin: 20px auto;
+  padding: 20px auto;
 }
 
-.img-principal{
-    border-radius: 30px 30px 30px 30px;
-    width: 50%;
-    height: 50%; 
-    border: solid 2px;
-    display: block;
-    margin:auto;
-
+.cartilla {
+  border-radius: 30px 30px 20px 20px;
+  align-content: center;
+  border: solid 10px red;
+  background-color: floralwhite;
+  width: 600px;
+  text-align: center;
+  margin: 20px auto;
+  padding: 20px auto;
 }
-.img-principal2{
-    border-radius: 30px 30px 30px 30px;
-    width: 50%;
-    height: 50%; 
-    border: solid 2px;
-    display: block;
-    margin:auto;
-
+.cartilla2 {
+  border-radius: 30px 30px 20px 20px;
+  align-content: center;
+  border: solid 10px red;
+  background-color: floralwhite;
+  width: 600px;
+  text-align: center;
+  margin: 20px auto;
+  padding: auto;
 }
 
-.mi-nombre{
-    font-style: oblique  ;
-    font-weight:900 px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+.img-principal {
+  border-radius: 30px 30px 30px 30px;
+  width: 50%;
+  height: 50%;
+  border: solid 2px;
+  display: block;
+  margin: auto;
+}
+.img-principal2 {
+  border-radius: 30px 30px 30px 30px;
+  width: 50%;
+  height: 50%;
+  border: solid 2px;
+  display: block;
+  margin: auto;
+}
+
+.mi-nombre {
+  font-style: oblique;
+  font-weight: 900 px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
