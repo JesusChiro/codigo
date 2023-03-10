@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+  }
+  body{
+      height: 100vh;
+  }
+  .cuadrado1 {
+    width: 100px;
+    height: 100px;
+  }
+  .cuadrado2 {
+    width: 20px;
+    height: 10px;
+  }
+  .cuadrado1 {
+    border: 1px solid red;
+    left: calc(50% - 50px);
+    position: relative;
+    top: 15%;
+  }
+  .cuadrado2 {
+    border: 1px solid red;
+    left: calc(50% - 50px);
+    position: relative;
+  
+  }
