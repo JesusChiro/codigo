@@ -7,7 +7,7 @@ body {
   height: 2000px;
 }
 /*Elemento flotante circulo celeste*/
-.action-button{
+.action-button {
   background-color: aqua;
   width: 20px;
   height: 20px;
@@ -18,8 +18,7 @@ body {
 }
 
 .caja-1,
-.caja-2
-{
+.caja-2 {
   width: 100px;
   height: 100px;
 }
