@@ -8,12 +8,14 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   overflow-x: hidden;
 }
+
 .texto-animado {
   animation-name: texto-volador;
   animation-duration: 5s;
-  animation-iteration-count: 1;
+  animation-iteration-count: infinite;
   border: solid;
 }
+
 /*Activar animacion con Keyframes*/
 @keyframes texto-volador {
   from {
@@ -22,6 +24,7 @@ body {
     background-color: aqua;
     border: none;
   }
+
   to {
     margin-left: -100%;
     background-color: brown;
@@ -29,6 +32,7 @@ body {
     border: none;
   }
 }
+
 /*Paso 01 nombrar animacion y su duracion*/
 .imagen-animada {
   animation-name: image-resize;
@@ -37,7 +41,17 @@ body {
   width: 400px;
   height: 400px;
 }
+
 @keyframes image-resize {
+  0% {
+    background-image: url("https://economipedia.com/statics/images/Logo-Economipedia-Blanco-Footer.png");
+  }
+  50% {
+    background-image: url("https://www.hospitalhuaral.gob.pe/wp-content/uploads/2021/01/nota1.jpg");
+  }
+  100% {
+    background-image: url("https://anjanadata.com/wp-content/uploads/2020/11/prueba-de-concepto-1536x853.jpg");
+  }
   from {
     width: 20px;
     height: 20px;
@@ -45,5 +59,53 @@ body {
   to {
     width: 400px;
     height: 400px;
+  }
+}
+.box-uno {
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  animation-name: box-animation;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+}
+
+@keyframes box-animation {
+  0% {
+    background-color: black;
+  }
+
+  25% {
+    background-color: sandybrown;
+  }
+
+  50% {
+    background-color: rgb(34, 0, 128);
+  }
+
+  75% {
+    background-color: blueviolet;
+  }
+
+  100% {
+    background-color: green;
+  }
+}
+.ball-uno {
+  height: 100px;
+  width: 100px;
+  border: solid green 2px;
+  border-radius: 50%;
+  animation: ball-animation;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  background-color: blue;
+}
+@keyframes ball-animation {
+  from {
+    transform: translate(0px);
+  }
+  to {
+    transform: translateY(-130px);
   }
 }

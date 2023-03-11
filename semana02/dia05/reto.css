@@ -1,0 +1,37 @@
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header header header header"
+    "nav main  aside"
+    "footer footer footer footer";
+  grid-template-columns: 150px 150px 150px 150px;
+  grid-template-rows: 150px 150px 150px 150px;
+
+  /*shorhand*/
+  grid-template:
+    "header header header header" 150px
+    "nav main main aside" 150px
+    "footer footer footer footer" 150px /
+    150px 150px 150px 150px;
+}
+
+.header {
+  background-color: red;
+  grid-area: header;
+}
+.nav {
+  background-color: green;
+  grid-area: nav;
+}
+.aside {
+  background-color: brown;
+  grid-area: aside;
+}
+.container {
+  background-color: aqua;
+  grid-area: main;
+}
+.footer {
+  background-color: violet;
+  grid-area: footer;
+}
