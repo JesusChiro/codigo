@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  text-align: center;
+  color: blue;
+}
+.flex-container {
+  display: flex;
+ /*flex-direction: column;**/
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  height: 600px;
+  background-color: rgb(201, 227, 107);
+  color: indigo;
+}
+.flex-item {
+  background-color: lightskyblue;
+  color: blueviolet;
+  font-size: 50px;
+}
+.flex-item:nth-child(odd) {
+  background-color: lightcoral;
+  align-self: flex-end;
+}
