@@ -23,7 +23,7 @@
 //abrir una ventana alerta donde podra ingresar
 //y ese valor se guardara en una variable
 
-//necesito que el usuarui ingrese el tipo de
+//necesito que el usuario ingrese el tipo de
 //operacion + - * /
 
 const valor1 = prompt("ingrese valor 1");
@@ -42,10 +42,11 @@ if (operacion === "+") {
 } else if (operacion === "-") {
   resultadoCalculadora = +valor1 - +valor2;
   console.log("resultado", resultadoCalculadora);
-}else if (operacion === "*") {
-    resultadoCalculadora = +valor1 * +valor2;
-    console.log("resultado", resultadoCalculadora);
-  }else if (operacion === "/") {
-    resultadoCalculadora = +valor1 / +valor2;
-    console.log("resultado", resultadoCalculadora);
-  }
+} else if (operacion === "*") {
+  resultadoCalculadora = +valor1 * +valor2;
+  console.log("resultado", resultadoCalculadora);
+} else if (operacion === "/") {
+  resultadoCalculadora = +valor1 / +valor2;
+  console.log("resultado", resultadoCalculadora);
+}
+document.write("hoola");
