@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones</title>
+</head>
+
+<body>
+    <h1>Funciones</h1>
+    <button onclick=nombreDeLaFuncion()>Invocar</button>
+    <button onclick="nombreDeLaFuncion(alert('hola'))">otro boton</button>
+
+    <p>Ingresa usuarios</p>
+    <input type="text" id="nombreUsuario">
+    <button onclick="mostrarNombre()">Ingresar</button>
+    <h1 id="reemplazo">nose tu nombre</h1>
+
+    <!-- ------------Ejercicio 1-------------------- -->
+    <input type="text" id="inputTexto">
+    <button onclick="mostrarTexto()">Click aquí</button>
+    <h1 id="titulo"></h1>
+
+    <!-- --------------Ejercicio 2------------------ -->
+    <input type="text" id="inputTexto2">
+    <button onclick="mostrarNombre2()">Click aquí</button>
+    <h1 id="titulo2"></h1>
+
+    <!-- capturar el value y tener como resultado mi artista favorito es Bad Bunny -->
+    <!-- ------------------------------------------------------------ -->
+    <!--ejemplos-->
+
+    <button onclick="comenzarAlarma()">Alarma</button>
+
+    <!-- ejemplo2 -->
+    <input type="number" id="tiempoElegido">
+    <button onclick="comenzarTiempo()">Alarma 2</button>
+    <h1 id="textoAlarma" style=color:red>Apagado</h1>
+
+
+</body>
+<script src="./funciones.js"></script>
+
+</html>
