@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.grupo1,
+.grupo2,
+.calc {
+  padding: 2rem;
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+h1 {
+  padding-bottom: 1px;
+}
+
+input {
+}
+
+button {
+  width: 100px;
+  height: 50px;
+}
