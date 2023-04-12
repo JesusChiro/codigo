@@ -54,7 +54,7 @@ getCategoriaById(id)
   .catch((error) => {
     console.log("error", error);
   });
-
+//Forma 2 de encadenar promesas
 getCategoriaById(id)
   .then((nombreDeCategoria) => {
     return getPeliculasByCategoria(nombreDeCategoria);
@@ -65,3 +65,12 @@ getCategoriaById(id)
   .catch((errorGenerico) => {
     console.log("errorGenerico", errorGenerico);
   });
+//Forma 3, en una funcion async usando awaitparams) {
+
+const caller = async () => {
+  const nombreCat = await getCategoriaById(1);
+  const pelis = await getPeliculasByCategoria(nombreCat);
+  console.log("final", pelis);
+};
+
+caller();
