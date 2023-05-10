@@ -1,0 +1,16 @@
+#root {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  width: 100%;
+}
+
+.jobs_list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+.nomber_of_result{
+  margin-bottom: 20px;
+  font-weight: 500;
+}

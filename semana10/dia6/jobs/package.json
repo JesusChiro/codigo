@@ -1,5 +1,5 @@
 {
-  "name": "form-validation",
+  "name": "jobs",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,12 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "boostrap": "^2.0.0",
-    "bootstrap": "^5.2.3",
+    "clsx": "^1.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-form-stepper": "^2.0.3",
-    "react-hook-form": "^7.43.9"
+    "sass": "^1.62.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",

@@ -1,5 +1,5 @@
 {
-  "name": "form-validation",
+  "name": "private",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,12 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "boostrap": "^2.0.0",
-    "bootstrap": "^5.2.3",
+    "@emotion/react": "^11.10.8",
+    "@emotion/styled": "^11.10.8",
+    "@mui/material": "^5.12.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-form-stepper": "^2.0.3",
-    "react-hook-form": "^7.43.9"
+    "react-router-dom": "^6.11.1",
+    "sweetalert2": "^11.7.5"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
