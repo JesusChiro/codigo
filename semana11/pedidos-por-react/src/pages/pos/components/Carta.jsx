@@ -1,10 +1,12 @@
 import { useContext } from "react";
 import Plato from "./Plato";
 import { PosContext } from "../context/PosState";
-import { platosArray } from "../../../mook/FakeData";
 
 const Carta = () => {
-  const { categoriaSeleccionada } = useContext(PosContext);
+  const {
+    categoriaSeleccionada,
+    platosAPI: { data: platosArray, cargandoPlatos },
+  } = useContext(PosContext);
   const platosDisponibles = platosArray.filter(
     (platoObj) => platoObj.categoriaId === categoriaSeleccionada.id
   );
@@ -22,9 +24,13 @@ const Carta = () => {
       </h3>
 
       <div className="carta__platos">
-        {platosDisponibles.map((platoObj, i) => (
-          <Plato key={i} platoObj={platoObj} />
-        ))}
+        {cargandoPlatos ? (
+          <div>Cargando...</div>
+        ) : (
+          platosDisponibles.map((platoObj, i) => (
+            <Plato key={i} platoObj={platoObj} />
+          ))
+        )}
       </div>
     </div>
   );

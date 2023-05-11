@@ -1,19 +1,24 @@
 import { createContext, useState } from "react";
 import PropTypes from "prop-types";
-
+import { useMesas } from "../../../hooks/useMesas";
+import { useCategorias } from "../../../hooks/useCategorias";
+import { usePlatos } from "../../..hooks/usePlatos";
 export const PosContext = createContext();
 
 const PosState = (props) => {
   const { children } = props;
-
   const [mesaSeleccionada, setMesaSeleccionada] = useState({ nro: "", id: 0 });
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState({
     id: 0,
     nombre: "",
   });
 
+  const { mesas, cargandoMesas } = useMesas();
+  const { categorias, cargandoCategorias } = useCategorias();
+  const { platos, cargandoPlatos } = usePlatos();
+
   const [pedidos, setPedidos] = useState([]);
-  const agregarPlato = (platoId) => {
+  const modificarPedido = (platoId, accion) => {
     const copiaPedidos = [...pedidos];
     //1. preguntar si hay una mesa actualmente seleccioanda
     if (mesaSeleccionada.nro) {
@@ -31,26 +36,45 @@ const PosState = (props) => {
         );
         //5.preguntamos si el ya exisitia en esa mesa
         if (platoPedidoActual) {
-          //agregamos una unidad a la cantidad de plato
-          platoPedidoActual.cantidad += 1;
+          //en este punto todo depende de la accion
+          if (accion === "sumar") {
+            platoPedidoActual.cantidad += 1;
+          } else {
+            if (platoPedidoActual.cantidad > 1) {
+              platoPedidoActual.cantidad -= 1;
+            } else {
+              pedidoActual.platos = pedidoActual.platos.filter(
+                (plato) => plato.platoId !== platoId
+              );
+            }
+          }
         } else {
-          //agregamos una unidad a la cantidad de platos
-          pedidoActual.platos.push({ platoId: platoId, cantidad: 1 });
+          if (accion === "sumar") {
+            //agregamos una unidad a la cantidad de platos
+            pedidoActual.platos.push({ platoId: platoId, cantidad: 1 });
+          } else {
+            return;
+          }
+          //está demás indicar la sentencia else puesto que, si restamos un plato
+          //que no existia en la mesa no debemos realizar ninguna accion
         }
         setPedidos([...copiaPedidos]);
       } else {
         //signifca que la mesa estaba vacía y que debemos crear el pedido que incluya
         //la primera unidad del plato que deseamos consumir
-        copiaPedidos.push({
-          platos: [{ platoId: platoId, cantidad: 1 }],
-          mesaId: mesaSeleccionada.id,
-        });
-        setPedidos([...copiaPedidos]);
+        if (accion === "sumar") {
+          copiaPedidos.push({
+            platos: [{ platoId: platoId, cantidad: 1 }],
+            mesaId: mesaSeleccionada.id,
+          });
+          setPedidos([...copiaPedidos]);
+        }
       }
     } else {
       //ToDo mostrar alerta de advertencia
     }
   };
+
   return (
     <PosContext.Provider
       value={{
@@ -59,7 +83,16 @@ const PosState = (props) => {
         categoriaSeleccionada: categoriaSeleccionada,
         setCategoriaSeleccionada: setCategoriaSeleccionada,
         pedidos: pedidos,
-        agregarPlato: agregarPlato,
+        modificarPedido: modificarPedido,
+        mesasAPI: { data: mesas, cargandoMesas: cargandoMesas },
+        categoriasAPI: {
+          data: categorias,
+          cargandoCategorias: cargandoCategorias,
+        },
+        platosAPI: {
+          data: platos,
+          cargandoPlatos: cargandoPlatos,
+        },
       }}
     >
       {children}

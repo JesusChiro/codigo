@@ -1,14 +1,22 @@
-import { mesasArray } from "../../../mook/FakeData";
+import { useContext } from "react";
+import { Mesa } from "./Mesa";
+import { PosContext } from "../context/PosState";
 
-import Mesa from "./Mesa";
 const Mesas = () => {
+  const {
+    mesasAPI: { data: mesasArray, cargandoMesas },
+  } = useContext(PosContext);
   //ToDo obtener las mesas de la API de POS
   return (
     <div className="mesas">
       <ul className="mesas__lista">
-        {mesasArray.map((mesaObj, i) => (
-          <Mesa key={i} id={mesaObj.id} nro={mesaObj.nro} />
-        ))}
+        {cargandoMesas ? (
+          <div>cargando...</div>
+        ) : (
+          mesasArray.map((mesaObj, i) => (
+            <Mesa key={i} id={mesaObj.id} nro={mesaObj.nro} />
+          ))
+        )}
       </ul>
       <div className="mesas__info"></div>
     </div>

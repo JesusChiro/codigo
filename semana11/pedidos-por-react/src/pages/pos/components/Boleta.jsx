@@ -4,7 +4,12 @@ import BoletaItem from "./BoletaItem";
 import { getPlatoByPlatoId } from "../../utils";
 
 const Boleta = () => {
-  const { mesaSeleccionada, pedidos } = useContext(PosContext);
+  const {
+    mesaSeleccionada,
+    pedidos,
+    platosAPI: { data: platos },
+  } = useContext(PosContext);
+
   let platosActuales = [];
   if (mesaSeleccionada.nro) {
     const pedidoMesaActual = pedidos.find(
@@ -14,7 +19,7 @@ const Boleta = () => {
       platosActuales = pedidoMesaActual.platos.map((plato) => {
         return {
           ...plato,
-          ...getPlatoByPlatoId(plato.platoId),
+          ...getPlatoByPlatoId(plato.platoId, platos),
         };
       });
       console.log("platoActuales", platosActuales);
@@ -28,7 +33,7 @@ const Boleta = () => {
       </h3>
       <hr />
       <div className="comanda">
-        <h4 className="comanda__mesa">Mesa 01</h4>
+        <h4 className="comanda__mesa">Mesa {mesaSeleccionada.nro}</h4>
         <p className="comanda__usuario">Carlos Jimenez</p>
         <hr />
 
